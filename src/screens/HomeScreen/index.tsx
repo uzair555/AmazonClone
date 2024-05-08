@@ -3,15 +3,12 @@ import {View, StyleSheet, FlatList} from 'react-native';
 import ProductItem from '../../components/ProductItem';
 
 import products from '../../data/products';
-import ImageCarousel from '../../components/ImageCarousel';
-import product from '../../data/product';
 
-const HomeScreen = () => {
+const HomeScreen = ({searchValue}: {searchValue: string}) => {
+  console.log(searchValue);
   return (
     <View style={styles.page}>
       {/* Render Product Componet */}
-
-      <ImageCarousel images={product.images}/>
       <FlatList
         data={products}
         renderItem={({item}) => <ProductItem item={item} />}

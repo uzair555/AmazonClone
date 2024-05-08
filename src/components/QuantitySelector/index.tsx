@@ -1,5 +1,6 @@
 import React from 'react';
 import { View, Text, Pressable, StyleSheet } from 'react-native';
+
 interface QuantitySelectorProps {
     quantity: number; // Quantity should be a number
     setQuantity: React.Dispatch<React.SetStateAction<number>>; // setQuantity should be a function to update quantity state
